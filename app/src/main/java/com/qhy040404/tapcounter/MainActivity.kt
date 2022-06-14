@@ -18,6 +18,8 @@ class MainActivity : AppCompatActivity() {
         var osz = 0
         var tfz = 0
 
+        text.text = refreshText(osz, tfz)
+
         b1.setOnClickListener {
             osz++
             text.text = refreshText(osz, tfz)
@@ -34,6 +36,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun refreshText(a: Int, b: Int): String {
-        return "160: $a\n240: $b"
+        return "160: $a\n240: $b\n\nTotal: ${160 * a + 240 * b}"
     }
 }
